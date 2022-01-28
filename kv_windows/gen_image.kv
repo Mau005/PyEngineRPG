@@ -1,0 +1,39 @@
+<Ventana>:
+    imagen:imagen
+    text_search:text_search
+    Label: 
+        text: "1"
+        id: num_label
+    BoxLayout:
+        orientantion: "horizontal"
+        Button:
+            text: "<"
+            on_release:root.left()
+        Image:
+            source: ""
+            id: imagen
+        Button:
+            text: ">"
+            on_release: root.right()
+    BoxLayout:
+        orientantion: "horizontal"
+        size_hint_y: .15
+        Label:
+            text: "Id:"
+        TextInput:
+            id: text_search
+
+        Button:
+            text: "Search"
+            on_release: root.search(root.text_search.text)
+    BoxLayout:
+        orientantion: "horizontal"
+        size_hint_y: .15
+        Label:
+            text: "Id Search"
+        TextInput:
+            id: id_search_image
+        
+        Button:
+            text: "Search ID"
+            on_release: root.search(root.text_search.text,False)

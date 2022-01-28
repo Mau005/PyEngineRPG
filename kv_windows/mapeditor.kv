@@ -1,0 +1,57 @@
+<popMenu>:
+    x_obj:x_obj
+    y_obj:y_obj
+    size_hint: .6,.3
+    BoxLayout:
+        orientation: "vertical"
+        spacing: 25
+        padding: 20
+        BoxLayout:
+            orientation: "horizontal"
+            Label:
+                size_hint_x: .3
+                text: "Pos X"
+            TextInput:
+                input_filter: "int"
+                id:x_obj
+            Label:
+                text: ""
+            Label:
+                size_hint_x: .3
+                text: "Pos Y:"
+            TextInput:
+                input_filter: "int"
+                id:y_obj
+        BoxLayout:
+            
+            Button:
+                text: "Ok"
+                on_release: root.ok()
+            Button:
+                text: "Exit"
+                on_release: root.exit()
+
+
+<Ventana@FloatLayout>:
+    contenedor_obj:contenedor_obj
+    render:render
+    Widget:
+        id: render
+        pos: self.pos
+        size: self.size
+                
+    AnchorLayout:
+        anchor_x: "right"
+        anchor_y: "top"
+        BoxLayout:
+            orientation: "vertical"
+            size_hint_x: .25
+            BoxLayout:
+                orientation: "vertical"
+                id: contenedor_obj
+                Button:
+                    text: "Tamaño Mapa"
+                    on_release: root.apretar()
+                Button:
+                    text: "Limpiar"
+                    on_release: root.limpie()

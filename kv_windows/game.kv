@@ -1,0 +1,34 @@
+<Hotkeys@GridLayout>:
+    rows: 3
+    cols: 3
+    size_hint: .3,.3
+    pos : 0,0
+    Button:
+        text: "nort_left"
+    Button:
+        text: "up"
+    Button:
+        text: "nort_right"
+    Button:
+        text: "left"
+    Button:
+        text: 
+    Button:
+        text: "right"
+    Button:
+        text: "south_left"
+    Button:
+        text: "south"
+    Button:
+        text: "south_righ"
+        
+<Game>:
+    canvas_render: canvas_render
+    FloatLayout:
+        Widget:
+            id:canvas_render
+            pos: self.pos
+            size: self.size
+            size_hint: self.size_hint
+            pos_hint: self.pos_hint
+        Hotkeys:

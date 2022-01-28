@@ -1,0 +1,29 @@
+<Menu>:
+    BoxLayout:
+        orientation:"vertical"
+        BoxLayout:
+            size_hint_y : .2
+            orientation: "vertical"
+            Label:
+                text: "Aqui una imagen del jogo"
+        BoxLayout:
+            orientation: "horizontal"
+            Label:
+                    
+            BoxLayout:
+                orientation: "vertical"
+                size_hint_y: .7
+                spacing: "20dp"
+                padding: 10
+                Button:
+                    text: "Jugar"
+                    on_release: root.play_game()
+                Button:
+                    text: "Continuar Partida"
+                Button:
+                    text: "Creditos"
+                Button:
+                    text: "Opciones"
+                Button:
+                    text: "Salir"
+            Label:
