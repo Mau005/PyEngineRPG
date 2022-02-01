@@ -54,7 +54,7 @@ class Game(Widget):
         
 
     def update(self,dt):
-        self.player.update(dt)
+        self.player.update([32,32],dt)
         self.scene.update(size_update(),dt)
 
         

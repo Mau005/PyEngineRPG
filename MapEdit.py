@@ -115,10 +115,8 @@ class Ventana(FloatLayout):
             if isinstance(obj_temp, Grounds):
                 self.mapa.set_pos(self.reference_player.get_x() + x, self.reference_player.get_y() + y, 0, obj_temp.get_id())
             elif isinstance(obj_temp, Edges):
-                self.mapa.set_pos(self.reference_player.get_x() + x, self.reference_player.get_y() + y, 1,
-                                  obj_temp.get_id())
-            self.scene.register_escene(
-                self.lista_objetos.get_id_obj(self.pincel.select, [x * cuadro[0], y * cuadro[1]], cuadro))
+                self.mapa.set_pos(self.reference_player.get_x() + x, self.reference_player.get_y() + y, 0,obj_temp.get_id())
+            self.scene.register_escene(self.lista_objetos.get_id_obj(self.pincel.select, [x * cuadro[0], y * cuadro[1]], cuadro))
 
     def on_touch_down(self, touch):
         self.__press_touch(touch)

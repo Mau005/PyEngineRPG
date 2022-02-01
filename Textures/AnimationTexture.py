@@ -26,7 +26,7 @@ class AnimationTexture(Simple_Texture):
         self._animation = anim
 
     def update(self,pos,size,dt):
-        super().update(pos,size,dt)
+        super().update(pos,size)
         self.time += dt
         if self.get_animation():
             self.source = f"{self.get_ruta()}/{str(self._frame)}"

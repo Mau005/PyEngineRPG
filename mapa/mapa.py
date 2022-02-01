@@ -20,7 +20,7 @@ class Mapa():
     def asig_map(self,max_x,max_y):
         self._max_x = max_x
         self._max_y = max_y
-        self._mapa = [[[] for y in range(max_y)] for x in range(max_x)]
+        self._mapa = [[[None,] for y in range(max_x)] for x in range(max_y)]
         
     def get_len_map(self):
         return len(self._mapa)
@@ -43,8 +43,9 @@ class Mapa():
         
         
     def set_pos(self,x,y,z,id_obj):
-        if len(self._mapa[x][y][z]):
-            self._mapa[x][y][z] = id_obj
+        print(self._mapa[x][y][z])
+        #if len(self._mapa[x][y][z]):
+        #    self._mapa[x][y][z] = id_obj
         
         
     def get_mapa(self):
@@ -54,7 +55,7 @@ class Mapa():
     def get_pos(self,x,y):
         return self._mapa[x][y][:-1]
     
-    def set_pos(self,x,y,obj):
+    def set_pos2(self,x,y,obj):
         self._mapa[x][y] = obj
     
         
